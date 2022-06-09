@@ -1,0 +1,24 @@
+syntax = "proto3";
+service GerenciarProdutos{
+    rpc ListarTodos(Empty) returns (ListarProdutos){}
+    rpc Listar(ProdutoPorId) returns(Produto){}
+    
+}
+
+message Empty{}
+
+message Produto{
+    string idproduto=1;
+    string nomeproduto=2;
+    string descricao=3;
+    string categoria=4;
+    string preco=5;
+    string quantidade=6;
+}
+message ListarProdutos{
+    repeated Produto produtos = 1;
+}
+
+message ProdutoPorId{
+    string idproduto=1;
+}
