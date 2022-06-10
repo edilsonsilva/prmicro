@@ -6,7 +6,7 @@ const mysql = require("mysql");
 const conexao = mysql.createConnection({
   host: "localhost",
   user: "root",
-  password: "Alunos@123",
+  password: "",
   database: "pedidodb",
 });
 
